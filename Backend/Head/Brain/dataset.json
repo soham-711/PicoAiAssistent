@@ -1,0 +1,711 @@
+{
+  "intents": [
+    {
+      "tag": "battery_check",
+      "patterns": [
+        "check battery",
+        "battery check karo",
+        "what's the battery level",
+        "show battery percentage",
+        "how much battery is left",
+        "tell me the battery status",
+        "battery status batao",
+        "battery kitna hai",
+        "battery level kya hai",
+        "check battery level"
+      ],
+      "responses": ["Checking battery level..."],
+      "function": "check_percentage"
+    },
+    {
+      "tag": "charger_check",
+      "patterns": [
+        "charger plug in hai ya nhi check karo",
+        "check plug",
+        "charger plug check karo",
+        "plugged in hai kya charger",
+        "check if charger is plugged in",
+        "charger laga hai ya nahi",
+        "charger check karo"
+      ],
+      "responses": ["Checking charger status..."],
+      "function": "check_plug"
+    },
+    {
+      "tag": "brightness_check",
+      "patterns": [
+        "check brightness",
+        "brightness check karo",
+        "screen brightness check karo",
+        "brightness level batao",
+        "current brightness level",
+        "brightness kitna hai",
+        "display brightness check karo"
+      ],
+      "responses": ["Checking brightness level..."],
+      "function": "check_brightness_percentage"
+    },
+    {
+      "tag": "brightness_set",
+      "patterns": [
+        "brightness level badhao",
+        "brightness level change karo",
+        "brightness change karo",
+        "increase brightness",
+        "brightness adjust karo",
+        "screen ki brightness badhao"
+      ],
+      "responses": ["Adjusting brightness level..."],
+      "function": "set_brightness_level"
+    },
+    {
+      "tag": "ip_check",
+      "patterns": [
+        "mera ip check karo",
+        "ip check karo",
+        "apna ip check karo",
+        "my ip address check karo",
+        "ip address dekho",
+        "mera ip batao",
+        "apna ip address dekho"
+      ],
+      "responses": ["Finding your IP address..."],
+      "function": "find_my_ip"
+    },
+    {
+      "tag": "running_apps",
+      "patterns": [
+        "check karo kon kon se app run ho rahe hai",
+        "check running app",
+        "running app check karo",
+        "abhi kaunse app chal rahe hai",
+        "kaunse apps run ho rahe hai",
+        "mujhe running apps batao"
+      ],
+      "responses": ["Checking running applications..."],
+      "function": "check_running_app"
+    },
+    {
+      "tag": "create_file",
+      "patterns": [
+        "python file banao",
+        "java file banao",
+        "html file banao",
+        "ek python file banao",
+        "ek java file banao",
+        "ek html file banao",
+        "create python file"
+      ],
+      "responses": ["Creating file..."],
+      "function": "create_file"
+    },
+    {
+      "tag": "get_advice",
+      "patterns": [
+        "koi advice do",
+        "kuch advice do",
+        "mujhe advice chahiye",
+        "koi suggestion do",
+        "give me advice",
+        "suggestion chahiye",
+        "suggestion do"
+      ],
+      "responses": ["Getting some advice..."],
+      "function": "get_random_advice"
+    },
+    {
+      "tag": "get_joke",
+      "patterns": [
+        "koi accha sa joke sunao",
+        "mujhe ek joke sunao",
+        "kuch funny sunao",
+        "ek joke sunao",
+        "koi joke sunao",
+        "sunao mujhe ek joke",
+        "kuch hasi wala sunao"
+      ],
+      "responses": ["Getting a joke..."],
+      "function": "get_random_joke"
+    },
+    {
+      "tag": "mic_check",
+      "patterns": [
+        "mike ki health batao",
+        "mike sahi se chal raha hai na",
+        "microphone check karo",
+        "mike check karo",
+        "microphone ki health batao",
+        "mike ki condition check karo"
+      ],
+      "responses": ["Checking microphone health..."],
+      "function": "mike_health"
+    },
+    {
+      "tag": "open_app",
+      "patterns": [
+        "App kholo",
+        "application",
+        "open app",
+        "koi app kholo",
+        "mujhe app open karna hai",
+        "application open karo",
+        "app launch karo"
+      ],
+      "responses": ["Opening application..."],
+      "function": "open_App"
+    },
+    {
+      "tag": "play_music",
+      "patterns": [
+        "youtube me music chalao",
+        "music play kar do",
+        "mujhe music play karo",
+        "play music on youtube",
+        "ek music play kar do",
+        "youtube pe music chalao",
+        "music chalao youtube pe"
+      ],
+      "responses": ["Playing music on YouTube..."],
+      "function": "play_music_on_youtube"
+    },
+    {
+      "tag": "scroll_up",
+      "patterns": [
+        "scroll up",
+        "upar scroll karo",
+        "upar le jao",
+        "upar ko scroll karo",
+        "page ko upar karo",
+        "thoda upar le jao"
+      ],
+      "responses": ["Scrolling up..."],
+      "function": "scroll_up"
+    },
+    {
+      "tag": "scroll_down",
+      "patterns": [
+        "scroll down",
+        "neeche scroll karo",
+        "page ko neeche le jao",
+        "neeche le jao",
+        "downward scroll karo",
+        "down scroll karo"
+      ],
+      "responses": ["Scrolling down..."],
+      "function": "scroll_down"
+    },
+    {
+      "tag": "scroll_top",
+      "patterns": [
+        "scroll to top",
+        "upar le jao page",
+        "page upar le jao",
+        "take to top",
+        "top par scroll karo",
+        "scroll to the beginning"
+      ],
+      "responses": ["Scrolling to top..."],
+      "function": "scroll_to_top"
+    },
+    {
+      "tag": "scroll_bottom",
+      "patterns": [
+        "scroll to bottom",
+        "neeche tak scroll karo",
+        "page ko neeche le jao",
+        "take to bottom",
+        "bottom tak le jao",
+        "scroll to end"
+      ],
+      "responses": ["Scrolling to bottom..."],
+      "function": "scroll_to_bottom"
+    },
+    {
+      "tag": "volume_get",
+      "patterns": [
+        "current volume batao",
+        "volume level check karo",
+        "mujhe volume batao",
+        "current volume check karo",
+        "volume kitna hai",
+        "volume status batao"
+      ],
+      "responses": ["Getting volume level..."],
+      "function": "get_volume_windows"
+    },
+    {
+      "tag": "volume_set",
+      "patterns": [
+        "volume set karo",
+        "volume ko set karo",
+        "volume level adjust karo",
+        "system volume set karo",
+        "volume adjust karo",
+        "volume ko adjust karo"
+      ],
+      "responses": ["Setting volume..."],
+      "function": "set_volume_windows"
+    },
+    {
+      "tag": "speaker_check",
+      "patterns": [
+        "check speaker health",
+        "speaker health check karo",
+        "speaker ka health check karo",
+        "speaker health dekho",
+        "mujhe speaker health check karna hai",
+        "speaker ka status batao"
+      ],
+      "responses": ["Checking speaker health..."],
+      "function": "speaker_health_test"
+    },
+    {
+      "tag": "new_tab",
+      "patterns": [
+        "new tab open karo",
+        "ek naya tab kholo",
+        "open a new tab",
+        "naya tab khol do",
+        "tab naya open karo",
+        "new tab kholna hai",
+        "ek aur tab open karo"
+      ],
+      "responses": ["Opening new tab..."],
+      "function": "open_new_tab"
+    },
+    {
+      "tag": "close_tab",
+      "patterns": [
+        "close tab",
+        "tab band karo",
+        "current tab close karo",
+        "close current tab",
+        "tab ko band karo",
+        "tab band kar do",
+        "close open tab"
+      ],
+      "responses": ["Closing tab..."],
+      "function": "close_tab"
+    },
+    {
+      "tag": "browser_menu",
+      "patterns": [
+        "open browser menu",
+        "browser menu open karo",
+        "menu kholna hai",
+        "browser ka menu open karo",
+        "menu khol do",
+        "browser menu khol do",
+        "menu open karna hai"
+      ],
+      "responses": ["Opening browser menu..."],
+      "function": "open_browser_menu"
+    },
+    {
+      "tag": "zoom_in",
+      "patterns": [
+        "zoom in",
+        "page ko zoom in karo",
+        "zoom in kar do",
+        "zoom badhao",
+        "zoom in please",
+        "thoda zoom karo",
+        "screen ko zoom in karo"
+      ],
+      "responses": ["Zooming in..."],
+      "function": "zoom_in"
+    },
+    {
+      "tag": "zoom_out",
+      "patterns": [
+        "zoom out",
+        "page ko zoom out karo",
+        "zoom kam karo",
+        "screen ko zoom out karo",
+        "zoom level kam karo",
+        "page ka zoom kam karo",
+        "zoom out kar do"
+      ],
+      "responses": ["Zooming out..."],
+      "function": "zoom_out"
+    },
+    {
+      "tag": "refresh_page",
+      "patterns": [
+        "refresh page",
+        "page ko refresh karo",
+        "refresh karo page",
+        "page refresh kar do",
+        "browser ko refresh karo",
+        "refresh this page",
+        "page refresh karo please"
+      ],
+      "responses": ["Refreshing page..."],
+      "function": "refresh_page"
+    },
+    {
+      "tag": "next_tab",
+      "patterns": [
+        "switch to next tab",
+        "next tab pe jao",
+        "tab ko next karo",
+        "next tab open karo",
+        "move to next tab",
+        "aage wale tab pe jao",
+        "next tab pe switch karo"
+      ],
+      "responses": ["Switching to next tab..."],
+      "function": "switch_to_next_tab"
+    },
+    {
+      "tag": "previous_tab",
+      "patterns": [
+        "switch to previous tab",
+        "previous tab pe jao",
+        "pehle wale tab pe jao",
+        "tab ko previous karo",
+        "move to previous tab",
+        "pichle tab par jao",
+        "back tab pe switch karo"
+      ],
+      "responses": ["Switching to previous tab..."],
+      "function": "switch_to_previous_tab"
+    },
+    {
+      "tag": "open_history",
+      "patterns": [
+        "open history",
+        "history open karo",
+        "browser history open karo",
+        "history ko khol do",
+        "history dekho",
+        "history page open karo",
+        "browser ki history khol do"
+      ],
+      "responses": ["Opening history..."],
+      "function": "open_history"
+    },
+    {
+      "tag": "open_bookmarks",
+      "patterns": [
+        "open bookmarks",
+        "bookmarks open karo",
+        "browser bookmarks open karo",
+        "bookmarks ko khol do",
+        "bookmarks dekho",
+        "bookmarks page open karo",
+        "browser ki bookmarks khol do"
+      ],
+      "responses": ["Opening bookmarks..."],
+      "function": "open_bookmarks"
+    },
+    {
+      "tag": "go_back",
+      "patterns": [
+        "go back",
+        "page pe back jao",
+        "previous page pe jao",
+        "page ko back karo",
+        "back page kholo",
+        "pichle page pe jao",
+        "back jao page pe"
+      ],
+      "responses": ["Going back..."],
+      "function": "go_back"
+    },
+    {
+      "tag": "go_forward",
+      "patterns": [
+        "go forward",
+        "forward page pe jao",
+        "next page pe jao",
+        "page ko forward karo",
+        "move forward",
+        "page ko aage badhao",
+        "forward page kholo"
+      ],
+      "responses": ["Going forward..."],
+      "function": "go_forward"
+    },
+    {
+      "tag": "dev_tools",
+      "patterns": [
+        "open dev tools",
+        "dev tools khol do",
+        "developer tools open karo",
+        "open developer tools",
+        "dev tools dekho",
+        "browser me dev tools kholna hai",
+        "inspect tool open karo"
+      ],
+      "responses": ["Opening developer tools..."],
+      "function": "open_dev_tools"
+    },
+    {
+      "tag": "full_screen",
+      "patterns": [
+        "toggle full screen",
+        "full screen mode on karo",
+        "screen ko full karo",
+        "full screen karo",
+        "toggle karo full screen",
+        "full screen mode me le jao",
+        "full screen enable karo"
+      ],
+      "responses": ["Toggling full screen..."],
+      "function": "toggle_full_screen"
+    },
+    {
+      "tag": "private_window",
+      "patterns": [
+        "open private window",
+        "private window kholo",
+        "incognito mode open karo",
+        "new private window open karo",
+        "private browsing shuru karo",
+        "open incognito window",
+        "new incognito mode kholo"
+      ],
+      "responses": ["Opening private window..."],
+      "function": "open_private_window"
+    },
+    {
+      "tag": "open_website",
+      "patterns": [
+        "open website",
+        "website open karo",
+        "site ko khol do",
+        "website kholo",
+        "open a website",
+        "website access karo",
+        "site kholo"
+      ],
+      "responses": ["Opening website..."],
+      "function": "open_web"
+    },
+    {
+      "tag": "volume_up",
+      "patterns": [
+        "increase volume",
+        "volume up karo",
+        "awaz badhao",
+        "turn up volume",
+        "volume ko thoda badhao",
+        "increase sound",
+        "sound up karo"
+      ],
+      "responses": ["Increasing volume..."],
+      "function": "volume_up"
+    },
+    {
+      "tag": "volume_down",
+      "patterns": [
+        "decrease volume",
+        "volume ko kam karo",
+        "awaz ko kam karo",
+        "volume low karo",
+        "sound kam karo",
+        "turn down volume",
+        "volume thoda kam karo"
+      ],
+      "responses": ["Decreasing volume..."],
+      "function": "volume_down"
+    },
+    {
+      "tag": "seek_forward",
+      "patterns": [
+        "seek forward",
+        "aage badho video me",
+        "video ko aage karo",
+        "move video forward",
+        "skip forward",
+        "video aage le jao",
+        "video ko aage seek karo"
+      ],
+      "responses": ["Seeking forward..."],
+      "function": "seek_forward"
+    },
+    {
+      "tag": "seek_backward",
+      "patterns": [
+        "seek backward",
+        "video ko pichhe karo",
+        "move video backward",
+        "backward seek karo video",
+        "video ko pichhe le jao",
+        "rewind video",
+        "video me pichhe badho"
+      ],
+      "responses": ["Seeking backward..."],
+      "function": "seek_backward"
+    },
+    {
+      "tag": "seek_forward_10s",
+      "patterns": [
+        "seek forward 10 seconds",
+        "10 seconds aage badho",
+        "skip 10 seconds ahead",
+        "move 10 seconds forward",
+        "video ko 10 second aage karo",
+        "10 second forward dikhaye",
+        "advance 10 seconds in video"
+      ],
+      "responses": ["Seeking forward 10 seconds..."],
+      "function": "seek_forward_10s"
+    },
+    {
+      "tag": "seek_backward_10s",
+      "patterns": [
+        "seek backward 10 seconds",
+        "10 seconds pichhe jao",
+        "move 10 seconds back",
+        "rewind 10 seconds",
+        "video ko 10 second pichhe karo",
+        "10 seconds back karo",
+        "reverse 10 seconds in video"
+      ],
+      "responses": ["Seeking backward 10 seconds..."],
+      "function": "seek_backward_10s"
+    },
+    {
+      "tag": "seek_forward_frame",
+      "patterns": [
+        "seek forward one frame",
+        "aage ek frame jao",
+        "move forward a frame",
+        "advance one frame",
+        "video ko ek frame aage karo",
+        "single frame forward karo",
+        "video ko aage ek frame le jao"
+      ],
+      "responses": ["Seeking forward one frame..."],
+      "function": "seek_forward_frame"
+    },
+    {
+      "tag": "seek_backward_frame",
+      "patterns": [
+        "seek backward one frame",
+        "pichhe ek frame jao",
+        "move back a frame",
+        "rewind one frame",
+        "video ko ek frame pichhe karo",
+        "single frame back karo",
+        "video ko pichhe ek frame le jao"
+      ],
+      "responses": ["Seeking backward one frame..."],
+      "function": "seek_backward_frame"
+    },
+    {
+      "tag": "seek_beginning",
+      "patterns": [
+        "seek to beginning",
+        "video ko shuruwat me le jao",
+        "move to beginning",
+        "rewind to start",
+        "video ko starting pe le jao",
+        "start se play karo",
+        "video ko shuru karo"
+      ],
+      "responses": ["Seeking to beginning..."],
+      "function": "seek_to_beginning"
+    },
+    {
+      "tag": "seek_end",
+      "patterns": [
+        "seek to end",
+        "video ko end pe le jao",
+        "move to end",
+        "forward to end",
+        "video ko last pe le jao",
+        "video ko end karo",
+        "go to end of video"
+      ],
+      "responses": ["Seeking to end..."],
+      "function": "seek_to_end"
+    },
+    {
+      "tag": "previous_chapter",
+      "patterns": [
+        "seek to previous chapter",
+        "pichla chapter dikhaye",
+        "move to previous chapter",
+        "go back to last chapter",
+        "previous chapter pe jao",
+        "video ko pichle chapter pe le jao",
+        "back to previous chapter"
+      ],
+      "responses": ["Seeking to previous chapter..."],
+      "function": "seek_to_previous_chapter"
+    },
+    {
+      "tag": "next_chapter",
+      "patterns": [
+        "seek to next chapter",
+        "agle chapter pe jao",
+        "move to next chapter",
+        "go forward to next chapter",
+        "next chapter dikhaye",
+        "next chapter pe le jao",
+        "forward to next chapter"
+      ],
+      "responses": ["Seeking to next chapter..."],
+      "function": "seek_to_next_chapter"
+    },
+    {
+      "tag": "decrease_speed",
+      "patterns": [
+        "decrease playback speed",
+        "playback speed ko kam karo",
+        "slow down video",
+        "video ki speed slow karo",
+        "speed ko reduce karo",
+        "video ko slow motion me karo",
+        "playback speed kam karo"
+      ],
+      "responses": ["Decreasing playback speed..."],
+      "function": "decrease_playback_speed"
+    },
+    {
+      "tag": "increase_speed",
+      "patterns": [
+        "increase playback speed",
+        "playback speed ko tez karo",
+        "speed up video",
+        "video ki speed fast karo",
+        "speed ko badhao",
+        "video ko fast motion me karo",
+        "playback speed badhao"
+      ],
+      "responses": ["Increasing playback speed..."],
+      "function": "increase_playback_speed"
+    },
+    {
+      "tag": "next_video",
+      "patterns": [
+        "move to next video",
+        "next video chalu karo",
+        "agli video pe jao",
+        "play next video",
+        "video ko next karo",
+        "aage wali video chalu karo",
+        "skip to next video"
+      ],
+      "responses": ["Moving to next video..."],
+      "function": "move_to_next_video"
+    },
+    {
+      "tag": "previous_video",
+      "patterns": [
+        "move to previous video",
+        "pichli video chalu karo",
+        "pehle wali video pe jao",
+        "play previous video",
+        "video ko previous karo",
+        "pichle wali video chalu karo",
+        "go to previous video"
+      ],
+      "responses": ["Moving to previous video..."],
+      "function": "move_to_previous_video"
+    }
+  ]
+}
